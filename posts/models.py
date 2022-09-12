@@ -9,3 +9,7 @@ class Post(models.Model):
 
   def __str__(self):
     return self.title
+
+  # Instance method that returns first 50 charatcters of post description
+  def snippet(self):
+    return self.description[:50] + '...'
