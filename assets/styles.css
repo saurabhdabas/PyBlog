@@ -40,7 +40,13 @@ img {
   background: #ECE9E6;
   background: linear-gradient(to right, #FFFFFF, #ECE9E6);
 }
-
+.post a{
+  text-decoration: none;
+}
+.post:hover{
+  cursor:pointer;
+  border: 10px solid #2AC38A;
+}
 .post__body {
   padding: 1rem;
   display: flex;
@@ -66,8 +72,13 @@ img {
 }
 
 .post__body h4 {
+  color:#000000;
   font-size: 1.5rem;
   text-transform: capitalize;
+}
+
+.post__body p{
+  color:#666;
 }
 
 .post__footer {
@@ -85,6 +96,6 @@ img {
   border-radius: 50%;
 }
 
-.user__info > small {
+.user__info > small, .user__info h5 {
   color: #666;
 }
