@@ -6,5 +6,5 @@ def posts(request):
   return render(request,'posts/posts.html',{'posts':posts})
 
 def post(request,slug):
-  post = Post.objects.filter(slug = slug)
+  post = Post.objects.get(slug = slug)
   return render(request,'posts/post.html',{'post':post})
