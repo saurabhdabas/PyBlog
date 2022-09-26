@@ -19,12 +19,13 @@ body {
   display: grid;
   grid-template-rows:0.50fr 1fr;
   grid-gap:50px;
+  align-content: space-between;
 }
 .posts{
   display:grid;
   grid-auto-flow: column;
   grid-template-columns: repeat(4,1fr);
-  grid-gap:50px;
+  grid-gap:80px;
   margin: 0px 50px;
   justify-content: space-between;
 }
@@ -74,7 +75,7 @@ user img {
   width:100%
 }
 .post__image{
-  width:100%
+  width:100%;
 }
 .post a{
   text-decoration: none;
@@ -109,10 +110,10 @@ user img {
   color: #fafafa;
 }
 
-.post__body h4 {
+.post__body h5 {
   color:#000000;
   font-size: 1.5rem;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 
 .post__body p{
@@ -128,10 +129,12 @@ user img {
 .user {
   display: flex;
   gap: .5rem;
+  align-items: center;
 }
 
 .user__image {
   border-radius: 50%;
+  border:3px solid #ccc;
 }
 
 .user__info > small, .user__info h5 {
@@ -155,7 +158,7 @@ user img {
 .post__individual-body{
   padding:20px 50px;
 }
-.post__individual-body h4{
+.post__individual-body h2{
   padding:10px;
 }
 .post__individual-body p{
@@ -166,5 +169,5 @@ user img {
   margin:10px;
 }
 .post__individual-footer{
-  padding:0px 50px;
+  padding:0px 57px;
 }
