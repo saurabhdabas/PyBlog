@@ -14,3 +14,9 @@ class Post(models.Model):
   # Instance method that returns first 50 charatcters of post description
   def snippet(self):
     return self.description[:50] + '...'
+
+  # Instance method to Calculate the Read time by assuming a human reads 200 words per minute
+  def readtime(self):
+    wordsArray = self.description.split()
+    readingtime = len(wordsArray)/200
+    return round(readingtime,1)
