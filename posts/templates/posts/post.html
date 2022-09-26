@@ -1,15 +1,16 @@
 {%extends 'base_layout.html'%}
+
 {%block content%}
 <div class="post__individual">
   <div class="post__individual-header">
-    <img src="{{post.thumbnail.url}}" alt="post__image" class="post__image" width="600">
+    <img src="{{post.thumbnail.url}}" alt="post__image" class="post__img" width='400px'>
   </div>
-  <div class="post__body">
+  <div class="post__individual-body">
     <span class="tag tag-blue">5 min read</span>
     <h4>{{post.title}}</h4>
     <p>{{post.description}}</p>
   </div>
-  <div class="post__footer">
+  <div class="post__individual-footer">
     <div class="user">
       <img src="https://i.pravatar.cc/40?img=8" alt="user__image" class="user__image">
       <div class="user__info">
