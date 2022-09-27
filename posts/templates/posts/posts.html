@@ -1,29 +1,87 @@
 {%extends 'base_layout.html'%}
-
+{%load static%}
 {%block content%}
+  <div class='blog__introduction'>
+  <div>
+    <img src="https://img.icons8.com/color/48/000000/symantec.png" width='40px'/>
+    <h2>EASY INVOICE</h2>
+  </div>
+  <h4>Simplifying the future of invoicing</h4>
+  </div>
   <div class='posts-wrapper'>
-    <div class='blog__introduction'>
-      <div>
-        <img src="https://img.icons8.com/color/48/000000/symantec.png" width='40px'/>
-        <h2>EASY INVOICE</h2>
+    <div class="snapshots">
+      <div class="snapshot">
+        <img src="{% static "media/Dashboard.png"%}" alt="dashboard" width='400px' height='250px'/>
+        <div class="snapshot__description">
+          <div>
+            <h2>Dashboard</h2>
+            <span class="dot dashboard"></span>
+          </div>
+          <p>Features :</p>
+          <p>[a] A Bar chart displaying total Invoices, paid Invoices and Unpaid Invoices</p>
+          <p>[b] Last three invoices with payment status</p>
+          <p>[c] A Message displaying total unpaid invoices</p>
+          <p>[d] Last three unpaid invoices with a send reminder button to send an automatic email to the customer</p>
+        </div>
       </div>
-      <h4>Simplifying the invoicing future</h4>
+      <div class="snapshot">
+        <div class="snapshot__description">
+          <div>
+            <h2>Customers</h2>
+            <span class="dot customers"></span>
+          </div>
+          <p>Features :</p>
+          <p>[a] Voice search a customer</p>
+          <p>[b] We add customers to database via a form</p>
+          <p>[c] We can edit customer details</p>
+          <p>[d] We can delete customers from our database</p>
+        </div>
+        <img src="{% static "media/Customers.png"%}" alt="dashboard" width='400px' height='250px'/>
+      </div>
+      <div class="snapshot">
+        <img src="{% static "media/Invoices.png"%}" alt="dashboard" width='400px' height='250px'/>
+        <div class="snapshot__description">
+          <div>
+            <h2>Invoices</h2>
+            <span class="dot invoices"></span>
+          </div>
+          <p>Features :</p>
+          <p>[a] Voice search an invoice</p>
+          <p>[b] We add invoices to database via a form</p>
+          <p>[c] We can edit and delete invoice from database</p>
+          <p>[d] We can download an invoice as a pdf</p>
+        </div>
+      </div>
+      <div class="snapshot">
+        <div class="snapshot__description">
+          <div>
+            <h2>Orders</h2>
+            <span class="dot orders"></span>
+          </div>
+          <p>Features :</p>
+          <p>[a] Voice search an Order</p>
+          <p>[b] We can browse received orders</p>
+          <p>[c] We can view details for an order</p>
+          <p>[d] We can download an order as a pdf</p>
+        </div>
+        <img src="{% static "media/Orders.png"%}" alt="dashboard" width='400px' height='250px'/>
+      </div>
     </div>
     <div class='posts'>
     {%for post in posts%}
       <div class="post">
         <a href="{%url "post" slug=post.slug%}">
         <div class="post__header">
-          <img src="{{post.thumbnail.url}}" alt="post__image" class="post__image" width="300">
+          <img src="{{post.thumbnail.url}}" alt="post__image" class="post__image" width="100%">
         </div>
         <div class="post__body">
           <span class="tag tag-blue">{{post.readtime}} min read</span>
           <h5>{{post.title}}</h5>
-          <p>{{post.snippet}}</p>
+          <h6>{{post.snippet}}</h6>
         </div>
         <div class="post__footer">
           <div class="user">
-            <img src="https://i.pravatar.cc/40?img=8" alt="user__image" class="user__image">
+            <img src="{% static "media/saurabh.jpg"%}" alt="user__image" class="user__image" width='40'>
             <div class="user__info">
               <h5>Saurabh</h5>
               <small>{{post.date}}</small>
