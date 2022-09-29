@@ -268,7 +268,7 @@ user img {
 }
 
 
-@media only screen and (min-width: 1024px) and (max-width:1200px)  {
+@media only screen and (min-width: 600px) and (max-width:1010px)  {
   .posts{
     grid-auto-flow: row;
     grid-template-rows:repeat(2,1fr);    
@@ -280,29 +280,88 @@ user img {
   .snapshot{
     align-items: center;
   }
-  
 }
-@media only screen and (max-width: 1440px) and (min-width: 1200px){
+
+@media only screen and (min-width: 1024px) and (max-width: 1250px){
+  .posts-wrapper{
+    grid-template-columns: 0.75fr 1fr;
+    margin: 50px 30px;
+   }
+  .dashboard,.invoices{
+    left:138px;
+  }
+  .customers,.orders{
+    left:549px;
+  }
+  .posts{
+    grid-auto-flow: row;
+    grid-template-columns: repeat(2,1fr);
+    /* grid-template-rows:repeat(auto,1fr);     */
+  }
+  .post{
+    width:100%;
+    margin:5px 0px;
+    height:350px;
+  }
+  .post__image{
+    min-width:80%;
+  }
+  .snapshot{
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 1252px) and (max-width: 1400px){
   .posts-wrapper{
     grid-template-columns: 0.75fr 0.50fr;
     margin: 50px 30px;
    }
   .dashboard,.invoices{
-    left:325px;
+    left:138px;
   }
   .customers,.orders{
-    left:736px;
+    left:549px;
   }
   .posts{
     grid-auto-flow: row;
-    grid-template-columns:repeat(2,1fr);    
+    /* grid-template-columns: repeat(2,1fr); */
+    grid-template-rows:repeat(auto,1fr);    
   }
   .post{
-    width:80%;
+    width:50%;
     margin:5px 0px;
+    height:350px;
   }
   .post__image{
-    width:100%;
+    min-width:80%;
+  }
+  .snapshot{
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 1405px){
+  .posts-wrapper{
+    grid-template-columns: 1fr 0.50fr;
+    margin: 50px 30px;
+   }
+  .dashboard,.invoices{
+    left:523px;
+  }
+  .customers,.orders{
+    left:933px;
+  }
+  .posts{
+    grid-auto-flow: row;
+    /* grid-template-columns: repeat(2,1fr); */
+    grid-template-rows:repeat(auto,1fr);    
+  }
+  .post{
+    width:50%;
+    margin:5px 0px;
+    height:350px;
+  }
+  .post__image{
+    min-width:80%;
   }
   .snapshot{
     align-items: center;
