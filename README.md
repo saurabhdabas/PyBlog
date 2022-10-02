@@ -1,4 +1,4 @@
-# Easy Invoice
+# Blog for Easy Invoice 
 
 ## Overview
 The blog serves as the documentation for Easy Invoice - an Invoicing Platform, I am currently working on.
